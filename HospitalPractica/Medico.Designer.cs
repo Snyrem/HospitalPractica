@@ -130,6 +130,7 @@
             Controls.Add(dgvMedicos);
             Name = "Medico";
             Text = "Medico";
+            Load += Medico_Load;
             ((System.ComponentModel.ISupportInitialize)dgvMedicos).EndInit();
             ResumeLayout(false);
             PerformLayout();

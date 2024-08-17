@@ -165,6 +165,7 @@
             Controls.Add(dgvPaciente);
             Name = "Paciente";
             Text = "Paciente";
+            Load += Paciente_Load;
             ((System.ComponentModel.ISupportInitialize)dgvPaciente).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -21,6 +21,13 @@ namespace HospitalPractica
             LoadPacientes();
             LoadMedicos();
         }
+ 
+        //--------------------------------------------------------------------------------------------------------------------
+        //
+        //Aqui cargamos nuestra informacion de nuestras tablas de la base de datos que hemos creado anteriormente para hacerla 
+        //interactuar con nuestro codigo form Citas, que se encargara de agrar una cita con un paciente y medico.
+        //
+        //--------------------------------------------------------------------------------------------------------------------
 
         private void LoadCitas()
         {
@@ -63,6 +70,12 @@ namespace HospitalPractica
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
+        //--------------------------------------------------------------------------------------------------------------------
+        //
+        //Este se boton se encarga de agregar los valores que selecciones a una cita para que quede registrada en una
+        //tabla dentro de nuestra base de datos.
+        //
+        //--------------------------------------------------------------------------------------------------------------------
         {
 
             string query = "INSERT INTO Cita (PacienteID, MedicoID, Fecha, Motivo) VALUES (@PacienteID, @MedicoID, @FechaHora";
@@ -77,7 +90,7 @@ namespace HospitalPractica
             db.ExecuteNonQuery(query, parameters);
             LoadCitas();
         }
-    
+
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
@@ -85,6 +98,11 @@ namespace HospitalPractica
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Citas_Load(object sender, EventArgs e)
         {
 
         }

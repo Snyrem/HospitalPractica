@@ -20,6 +20,11 @@ namespace HospitalPractica
             LoadMedico();
             LoadDepartamento();
         }
+        //--------------------------------------------------------------------------------------------------------------------
+        //
+        //Aqui cargamos nuestra informacion de nuestras tablas de la base de datos que hemos creado anteriormente.
+        //
+        //--------------------------------------------------------------------------------------------------------------------
         private void LoadMedico()
         {
             string query = "SELECT * FROM Medico";
@@ -47,6 +52,12 @@ namespace HospitalPractica
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
+        //--------------------------------------------------------------------------------------------------------------------
+        //
+        //Con este boton de agregar, registraremos un medico con su respectivo departamento para que al momento de que un paciente
+        //tenga que ser revisado por uno pueda detectarse mas organizadamente que departamento le convendria mejor.
+        //
+        //--------------------------------------------------------------------------------------------------------------------
         {
             string query = "INSERT INTO Medico (DepartamentoID, Nombre) VALUES (@DepartamentoID, @Nombre)";
             SqlParameter[] parameters =
@@ -84,6 +95,11 @@ namespace HospitalPractica
         }
 
         private void lbNombreDepartmaneto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Medico_Load(object sender, EventArgs e)
         {
 
         }

@@ -138,6 +138,7 @@
             Controls.Add(cmbPaciente);
             Name = "Citas";
             Text = "Citas";
+            Load += Citas_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCitas).EndInit();
             ResumeLayout(false);
             PerformLayout();

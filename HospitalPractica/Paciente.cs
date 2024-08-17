@@ -19,6 +19,11 @@ namespace HospitalPractica
             InitializeComponent();
             LoadPaciente();
         }
+        //--------------------------------------------------------------------------------------------------------------------
+        //
+        //Aqui cargamos nuestra informacion de nuestras tablas de la base de datos que hemos creado anteriormente.
+        //
+        //--------------------------------------------------------------------------------------------------------------------
         private void LoadPaciente()
         {
             string query = "SELECT * FROM Paciente";
@@ -31,6 +36,13 @@ namespace HospitalPractica
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
+        //--------------------------------------------------------------------------------------------------------------------
+        //
+        //Al igual que los otros botones de agregar este se encargara objetivamente de lo mismo como tal ya que agregara los datos
+        //que definen a un paciente para ser identificado con caracteristicas unicas de otros y tener una mucha mejor organizacion de
+        //todos nuestros datos en nuestro programa y base de datos.
+        //
+        //--------------------------------------------------------------------------------------------------------------------
         {
             string query = "INSERT INTO Paciente (Nombre, FechaNacimiento, Telefono, Domicilio ) VALUES (@Nombre, @FechaNacimiento, @Telefono, @Domicilio";
             SqlParameter[] parameters =
@@ -51,6 +63,11 @@ namespace HospitalPractica
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Paciente_Load(object sender, EventArgs e)
         {
 
         }

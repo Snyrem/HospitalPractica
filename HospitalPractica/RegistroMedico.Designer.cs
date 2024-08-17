@@ -160,6 +160,7 @@
             Controls.Add(cmbPaciente);
             Name = "RegistroMedico";
             Text = "RegistroMedico";
+            Load += RegistroMedico_Load;
             ((System.ComponentModel.ISupportInitialize)dgvRegistroMedico).EndInit();
             ResumeLayout(false);
             PerformLayout();

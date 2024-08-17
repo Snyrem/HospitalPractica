@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
+//--------------------------------------------------------------------------------------------------------------------
+//
+//En esta parte de codigo o mas bien en esta clase nos encargaremos de hacer la conexion a nuestra base de datos.
+//
+//--------------------------------------------------------------------------------------------------------------------
+
 namespace HospitalPractica
 {
     public class BaseDatos

@@ -21,7 +21,11 @@ namespace HospitalPractica
             LoadRegistroMedico();
             LoadPaciente();
         }
-
+        //--------------------------------------------------------------------------------------------------------------------
+        //
+        //Aqui cargamos nuestra informacion de nuestras tablas de la base de datos que hemos creado anteriormente.
+        //
+        //--------------------------------------------------------------------------------------------------------------------
         private void LoadRegistroMedico()
         {
             string query = "SELECT * FROM RegistroMedico";
@@ -82,6 +86,13 @@ namespace HospitalPractica
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
+        //--------------------------------------------------------------------------------------------------------------------
+        //
+        //Ya que todo nuestro codigo funcione correctamente terminara en un registro medico o una receta como nostros los conocemos mas
+        //comunmente por aca en Mexico con sus respectivos datos agregados y que la pueden definir con caracteristicas muy relevantes para
+        //que cumpla con todos los requisitos.
+        //
+        //--------------------------------------------------------------------------------------------------------------------
         {
             string query = "INSERT INTO RegistroMedico (PacienteID, Fecha, Descripcion) VALUES (@PacienteID, @Fecha, @Descripcion)";
             SqlParameter[] parameters =
@@ -97,6 +108,11 @@ namespace HospitalPractica
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegistroMedico_Load(object sender, EventArgs e)
         {
 
         }
